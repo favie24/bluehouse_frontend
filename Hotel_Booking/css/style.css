@@ -1,0 +1,24 @@
+body {
+  background-image: url("../images/background.jpg");
+  font-family: 'Poppins', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
