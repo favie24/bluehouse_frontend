@@ -1,0 +1,64 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../images/background.jpg') center/cover no-repeat;
+  height: 100vh;
+}
+
+.hero h1 {
+  animation: fadeInDown 1.5s ease;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.plan-card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.premium {
+  border: 2px solid #0d6efd;
+}
+
+footer {
+  margin-top: auto;
+}
+
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    text-align: center;
+  }
+}
+
