@@ -1,0 +1,276 @@
+/*=========================================
+DARK MODE
+=========================================*/
+
+body.dark-mode{
+    background:#0f172a;
+    color:#e5e7eb;
+    transition:background .4s ease,color .4s ease;
+}
+
+body.dark-mode header{
+    background:#1e293b;
+}
+
+body.dark-mode .about,
+body.dark-mode .projects,
+body.dark-mode .contact{
+    background:#0f172a;
+}
+
+body.dark-mode .skills,
+body.dark-mode .services{
+    background:#111827;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .service-card,
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea,
+body.dark-mode .social-icons a{
+    background:#1e293b;
+    color:#f3f4f6;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a{
+    color:#f3f4f6;
+}
+
+body.dark-mode .progress{
+    background:#334155;
+}
+
+/*=========================================
+SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--secondary);
+}
+
+/*=========================================
+TEXT SELECTION
+=========================================*/
+
+::selection{
+    background:var(--primary);
+    color:#fff;
+}
+
+/*=========================================
+UTILITY CLASSES
+=========================================*/
+
+.text-center{
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
+
+.shadow{
+    box-shadow:var(--shadow);
+}
+
+/*=========================================
+HOVER EFFECTS
+=========================================*/
+
+img{
+    transition:.4s ease;
+}
+
+img:hover{
+    transform:scale(1.02);
+}
+
+button,
+.btn{
+    transition:.3s ease;
+}
+
+/*=========================================
+RESPONSIVE DESIGN
+=========================================*/
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    section{
+        padding:80px 7%;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .hero-buttons,
+    .social-icons{
+        justify-content:center;
+    }
+
+    .about-container,
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        margin-bottom:30px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar{
+        height:75px;
+    }
+
+    .menu-btn{
+        display:block;
+        font-size:1.5rem;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        right:-100%;
+        width:260px;
+        background:#fff;
+        flex-direction:column;
+        padding:30px;
+        box-shadow:var(--shadow);
+        transition:.4s ease;
+    }
+
+    body.dark-mode .nav-links{
+        background:#1e293b;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .hero h2{
+        font-size:1.5rem;
+    }
+
+    .hero-image img{
+        width:280px;
+        height:280px;
+    }
+
+    .about-image img{
+        width:300px;
+        height:300px;
+    }
+
+    .project-container,
+    .services-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .contact-form button{
+        width:100%;
+    }
+
+    .scroll-top{
+        right:20px;
+        bottom:20px;
+    }
+
+}
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+    section{
+        padding:70px 5%;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero-image img{
+        width:220px;
+        height:220px;
+    }
+
+    .about-image img{
+        width:220px;
+        height:220px;
+    }
+
+}
+
+/*=========================================
+SMOOTH FADE
+=========================================*/
+
+section{
+    animation:fadeSection .8s ease;
+}
+
+@keyframes fadeSection{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*=========================================
+END OF CSS
+=========================================*/

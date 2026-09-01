@@ -1,0 +1,9 @@
+{
+  "name": "weather-app-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix weather-app run dev --",
+    "build": "npm --prefix weather-app run build --",
+    "preview": "npm --prefix weather-app run preview --"
+  }
+}

@@ -1,0 +1,2 @@
+import { AlertCircle } from 'lucide-react'
+export default function ErrorState({ message, onRetry }) { return <div className="glass rounded-3xl p-8 text-center"><AlertCircle className="mx-auto mb-3" size={40}/><h2 className="text-xl font-bold">Something went wrong</h2><p className="mx-auto mt-2 max-w-md text-white/65">{message}</p><button onClick={onRetry} className="mt-5 rounded-xl bg-white px-5 py-2.5 font-bold text-slate-900">Try again</button></div> }

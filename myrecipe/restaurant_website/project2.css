@@ -1,0 +1,187 @@
+/*=========================================
+ABOUT SECTION
+=========================================*/
+
+.about{
+    background:#ffffff;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+.about-content h3{
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.about-content p{
+    font-size:1rem;
+    line-height:1.9;
+    margin-bottom:20px;
+    color:var(--text);
+}
+
+.about-content .btn{
+    margin-top:15px;
+}
+
+/*=========================================
+SKILLS SECTION
+=========================================*/
+
+.skills{
+    background:var(--light);
+}
+
+.skills-container{
+    max-width:850px;
+    margin:auto;
+}
+
+.skill{
+    margin-bottom:30px;
+}
+
+.skill-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+    font-weight:600;
+    color:var(--dark);
+}
+
+.progress{
+    width:100%;
+    height:14px;
+    background:#dbe4f1;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0;
+    border-radius:20px;
+    transition:width 1.5s ease;
+}
+
+/* Individual Skill Widths */
+
+.progress-bar.html{
+    width:95%;
+    background:#e44d26;
+}
+
+.progress-bar.css{
+    width:90%;
+    background:#264de4;
+}
+
+.progress-bar.js{
+    width:80%;
+    background:#f7df1e;
+}
+
+.progress-bar.git{
+    width:75%;
+    background:#f1502f;
+}
+
+.progress-bar.github{
+    width:85%;
+    background:#24292e;
+}
+
+/*=========================================
+SKILL CARD ANIMATION
+=========================================*/
+
+.skill{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp .8s ease forwards;
+}
+
+.skill:nth-child(1){
+    animation-delay:.2s;
+}
+
+.skill:nth-child(2){
+    animation-delay:.4s;
+}
+
+.skill:nth-child(3){
+    animation-delay:.6s;
+}
+
+.skill:nth-child(4){
+    animation-delay:.8s;
+}
+
+.skill:nth-child(5){
+    animation-delay:1s;
+}
+
+/*=========================================
+SECTION TITLE DECORATION
+=========================================*/
+
+.section-title h2{
+    position:relative;
+    display:inline-block;
+    padding-bottom:12px;
+}
+
+.section-title h2::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    width:80px;
+    height:4px;
+    border-radius:10px;
+    background:var(--primary);
+}
+
+/*=========================================
+KEYFRAMES
+=========================================*/
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
